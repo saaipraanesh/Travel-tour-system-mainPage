@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <header>   
+      <div class="slideshow-container">
+        <div class="mySlides fade">
+          <img src="front3.jpg" style="width:100%">
+        </div>
+
+        <div class="mySlides fade">
+          <img src="front2.jpg" style="width:100%">
+        </div>
+
+        <div class="mySlides fade">
+          <img src="front1.jpg" style="width:100%">
+        </div>
+        <br>
+        <div class="main">
+            <ul>
+              <ul class="list">
+                
+                  <li class="logo"><a href="mainPage.html"><img src="earth-globe.png" alt="Logo" style="width:36px;height:36px"></a></li>
+                  <div class="search">
+                    <form method="POST" action="info.php">
+                      <input type="text" name="search_p" placeholder="Search.." size="50">
+                      <input type="image" name="submit_p" src="search_icon.png" alt="Search image">
+                    </form>
+                  </div>
+              </ul>
+
+              <ul class="list2">
+                <li class="active-menu"><a href="mainPage.html">Home</a></li>
+                <li><a id="long" href="destination.html">Destination</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+                <li><a href="index.html">Logout</a></li>
+                <li><a href="Lightship-CLONE-main\index.html">LightShip</a></li>
+              </ul>
+            </ul>
+        </div>
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+      </div>
+    </header> 
+    
+
+    <div style="text-align:center">
+      <span class="dot" onclick="currentSlide(1)"></span> 
+      <span class="dot" onclick="currentSlide(2)"></span> 
+      <span class="dot" onclick="currentSlide(3)"></span> 
+    </div>
+    <div class="title">
+      <h1>Travel Agency Software</h1>
+      <!-- <div style="margin: 0px 35%;" class="signup-op">
+        <a href="signup.html">SignUp</a>
+        <a href="signin.html">SignIn</a>
+      </div> -->
+    </div>
+    <br>
+        <br>
+<br><br>
+    <div class="contain">
+      <div class="heading">
+        <h2>Popular Destination</h2>
+      </div>
+      <div class="box">
+        <div class="imgBox">
+          <img src="images//destination//tajmahal1.jpg" alt="Taj Mahal Image" style="width: auto;height: 270px;">
+        </div>
+        <div class="name-text left1">
+          <h2>Taj Mahal</h2>
+          <a href="destination.html" class="btn">Visit</a>
+        </div>
+      </div>
+      <div class="box">
+        <div class="imgBox">
+          <img src="images//destination//ladakh1.jpg" alt="Ladakh Image" style="width: auto;height: 270px;">
+        </div>
+        <div class="name-text left2">
+          <h2>Ladakh</h2>
+          <a href="destination.html" class="btn">Visit</a>
+        </div>
+      </div>
+      <div class="box">
+        <div class="imgBox">
+          <img src="images//destination//kerala1.jpg" alt="Kerala Image" style="width: auto;height: 270px;">
+        </div>
+        <div class="name-text left3">
+          <h2>Kerala</h2>
+          <a href="destination.html" class="btn">Visit</a>
+        </div>
+      </div>
+      
+      <div class="box">
+        <div class="imgBox">
+          <img src="images//destination//goa1.jpg" alt="Goa Image" style="width: auto;height: 270px;">
+        </div>
+        <div class="name-text left4">
+          <h2>Goa</h2>
+          <a href="destination.html" class="btn">Visit</a>
+        </div>
+      </div>
+      <div class="destination-btn">
+        <a href="destination.html">View all</a>
+      </div>
+    </div>
+    
+    
+    <script>
+    var slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      var dots = document.getElementsByClassName("dot");
+      if (n > slides.length) {slideIndex = 1}    
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";  
+      }
+      for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";  
+      dots[slideIndex-1].className += " active";
+    }
+    </script>
+
+  <!-- footer --> 
+
+    <footer>
+        <div class="foot-panel1">
+          <ul>
+            <a href="mainPage.html" class="no-underline">Back to top</a></li>
+          </ul>
+
+        </div>
+        <div class="foot-panel2">
+            <ul>
+                <p>Get to Know Us</p>
+                <a href="#" class="NOUNDERLINE">Blog</a>
+                <a href="#" class="NOUNDERLINE">About Tourism</a>
+                <a href="#" class="NOUNDERLINE">Tourism Science</a>
+            </ul>
+            <ul>
+                <p>Connect with Us</p>
+                <a href="facebook.com" class="NOUNDERLINE">Facebook</a>
+                <a href="twitter.com" class="NOUNDERLINE">Twitter</a>
+                <a href="instagram.com" class="NOUNDERLINE">Instagram</a>
+            </ul>
+            <ul>
+                <p>Make Money with Us</p>
+                <a href="#" class="NOUNDERLINE">Sell on Tourism</a>
+                <a href="#" class="NOUNDERLINE">Protect and Build Your Brand</a>
+                <a href="#" class="NOUNDERLINE">Advertise Your Travel</a>
+                <a href="#" class="NOUNDERLINE">Tourism Pay on Customers</a>
+                <a href="#" class="NOUNDERLINE">Fulfilment by Tourism</a>
+            </ul>
+            <ul>
+                <p>Let Us Help You</p>
+                <a href="#" class="NOUNDERLINE">COVID-19 and Tourism</a>
+                <a href="#" class="NOUNDERLINE">Your Account</a>
+                <a href="#" class="NOUNDERLINE">Returns Centre</a>
+                <a href="#" class="NOUNDERLINE">100% Purchase Protection</a>
+                <a href="#" class="NOUNDERLINE">Tourism App Download</a>
+                <a href="#" class="NOUNDERLINE">Help</a>
+            </ul>
+
+            <ul>
+              <p><a class="no-underline" href="feedback.html">Comment</a></p>
+              
+              <form method="POST" action="feedback.php">
+                <div>
+                  <input type="text" name="Name" placeholder="Your Name" required>
+                </div>
+                <div class="form-group">
+                  <input type="email" name="email" class="form-control" id="inputEmail" placeholder="Your Email" required>
+                </div>
+                <div>
+                  <textarea id="msg" name="message" placeholder="Feedback" rows="4" cols="30" required></textarea>
+                </div>
+                <div class="submit">
+                  <button type="submit" class="btn btn-primary" ng-click="performValidation()" name='submit'>Submit Feedback</button>
+                </div>
+              </form>
+            </ul>
+
+            <!--  -->
+        </div>
+        <div class="foot-panel3">
+            <div class="bot_logo">
+              <a href="#" class="no-underline" style="color: #eeeeee;">
+                <img src="css/India-logo.png" alt="logo">Tourism
+              </a>
+            </div>
+        </div>
+        <div class="foot-panel4">
+            <div class="pages">
+                <a>Conditions of Use</a>
+                <a>Privacy  Notice</a>
+                <a>Your Add Choices</a>
+            </div>
+            <div class="copyright">
+                © 2004-2024, <a href="Tourism.com" class="no-underline" style="color: #eeeeee;">Tourism.com</a>, Inc. or its affiliates
+            </div>
+        </div>
+    </footer>
+    
+  </body>
+</html> 
